@@ -1,5 +1,4 @@
 import checkOptions from './checkOptions';
-import errorCalculation from './errorCalculation';
 import step from './step';
 
 /**
@@ -35,6 +34,7 @@ export function levenbergMarquardt(data, parameterizedFunction, options) {
     dampingStepDown,
     maxIterations,
     errorTolerance,
+    errorCalculation,
     centralDifference,
     gradientDifference,
     improvementThreshold,
