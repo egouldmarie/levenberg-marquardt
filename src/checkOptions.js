@@ -1,4 +1,5 @@
 import { isAnyArray } from 'is-any-array';
+import errorCalc from './errorCalculation';
 
 export default function checkOptions(data, parameterizedFunction, options) {
   let {
@@ -12,6 +13,7 @@ export default function checkOptions(data, parameterizedFunction, options) {
     dampingStepDown = 9,
     maxIterations = 100,
     errorTolerance = 1e-7,
+    errorCalculation = errorCalc,
     centralDifference = false,
     gradientDifference = 10e-2,
     improvementThreshold = 1e-3,
@@ -106,6 +108,7 @@ export default function checkOptions(data, parameterizedFunction, options) {
     dampingStepDown,
     maxIterations,
     errorTolerance,
+    errorCalculation,
     centralDifference,
     gradientDifference,
     improvementThreshold,
