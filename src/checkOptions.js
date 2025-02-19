@@ -3,6 +3,7 @@ import errorCalc from './errorCalculation';
 
 export default function checkOptions(data, parameterizedFunction, options) {
   let {
+    timeout,
     minValues,
     maxValues,
     initialValues,
@@ -80,12 +81,24 @@ export default function checkOptions(data, parameterizedFunction, options) {
     );
   }
 
+  let checkTimeout;
+  if (timeout !== undefined) {
+    if (typeof timeout !== 'number') {
+      throw new Error('timeout should be a number');
+    }
+    let endTime = Date.now() + timeout * 1000;
+    checkTimeout = () => Date.now() > endTime;
+  } else {
+    checkTimeout = () => false;
+  }
+
   let weightSquare = new Array(data.x.length);
   for (let i = 0; i < nbPoints; i++) {
     weightSquare[i] = filler(i);
   }
 
   return {
+    checkTimeout,
     minValues,
     maxValues,
     parameters,
