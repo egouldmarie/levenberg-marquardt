@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mljs/levenberg-marquardt.git"
+    "url": "https://github.com/egouldmarie/levenberg-marquardt"
   },
   "keywords": [
     "machine",
@@ -40,9 +40,9 @@
   "author": "Miguel Asencio <maasencioh@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mljs/levenberg-marquardt/issues"
+    "url": "https://github.com/egouldmarie/levenberg-marquardt/issues"
   },
-  "homepage": "https://github.com/mljs/levenberg-marquardt#readme",
+  "homepage": "https://github.com/egouldmarie/levenberg-marquardt#readme",
   "devDependencies": {
     "@types/jest": "^29.5.0",
     "benchmark": "^2.1.4",
